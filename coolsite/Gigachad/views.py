@@ -36,6 +36,7 @@ def index32(request):
     return HttpResponse(f"Страница приложения Gigachad{dict(request.GET)}")
 
 def pageNotFound(request, exception):
+    print(exception)
     return HttpResponseNotFound(f"<h1>Ошибка 404, попробуйте ещё раз<br>{exception}</h1>")
 
 def year_archive(request,year):
